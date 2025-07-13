@@ -1,19 +1,18 @@
 import urllib.request
+import gzip
 
-def pib_por_pais():
+def ejercicio5():
     url = "https://ec.europa.eu/eurostat/estat-navtree-portlet-prod/BulkDownloadListing?file=data/sdg_08_10.tsv.gz&unzip=true"
-    iniciales = input("Introduce las iniciales del país (por ejemplo: ES): ").upper()
-
+    pais = input("Iniciales del país (ej: ES): ")
     try:
-        with urllib.request.urlopen(url) as response:
-            datos = response.read().decode("utf-8")
-            for linea in datos.splitlines():
-                if linea.startswith(iniciales):
-                    print(f"Datos del país {iniciales}:\n{linea}")
-                    break
-            else:
-                print("País no encontrado.")
-    except Exception as e:
-        print("Error al acceder al archivo:", e)
+        datos = urllib.request.urlopen(url).read()
+        texto = datos.decode("utf-8")
+        for linea in texto.split("\n"):
+            if linea.startswith(pais):
+                print(linea)
+                return
+        print("País no encontrado.")
+    except:
+        print("No se pudo acceder al archivo.")
 
-pib_por_pais()
+ejercicio5()
