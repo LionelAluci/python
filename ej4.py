@@ -1,13 +1,13 @@
 import urllib.request
 
-def contar_palabras():
-    url = input("Introduce la URL: ")
+def ejercicio4():
+    url = input("URL: ")
     try:
-        with urllib.request.urlopen(url) as response:
-            contenido = response.read().decode("utf-8")
-            palabras = contenido.split()
-            print(f"Número de palabras: {len(palabras)}")
-    except Exception as e:
-        print("Error al acceder a la URL:", e)
+        pagina = urllib.request.urlopen(url)
+        texto = pagina.read().decode("utf-8")
+        palabras = texto.split()
+        print("Cantidad de palabras:", len(palabras))
+    except:
+        print("No se pudo acceder a la URL.")
 
-contar_palabras()
+ejercicio4()
