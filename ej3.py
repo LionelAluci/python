@@ -1,4 +1,4 @@
-def ejercicio3():
+def ej3():
     n = int(input("Número (1-10): "))
     m = int(input("Línea (1-10): "))
     try:
@@ -9,4 +9,4 @@ def ejercicio3():
     except:
         print("El archivo no existe o la línea es incorrecta.")
 
-ejercicio3()
+ej3()
