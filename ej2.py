@@ -1,4 +1,4 @@
-def ejercicio2():
+def ej2():
     n = int(input("Número (1-10): "))
     try:
         archivo = open("tabla-" + str(n) + ".txt", "r")
@@ -7,4 +7,4 @@ def ejercicio2():
     except:
         print("El archivo no existe.")
 
-ejercicio2()
+ej2()
