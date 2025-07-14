@@ -1,4 +1,4 @@
-def ejercicio1():
+def ej1():
     n = int(input("Número (1-10): "))
     archivo = open("tabla-" + str(n) + ".txt", "w")
     for i in range(1, 11):
@@ -6,4 +6,4 @@ def ejercicio1():
     archivo.close()
     print("Tabla guardada.")
 
-ejercicio1()
+ej1()
