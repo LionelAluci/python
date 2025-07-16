@@ -29,7 +29,7 @@ def ejercicio6_parte2():
             media = sum(numeros) / len(numeros)
             archivo.write(f"{clave},{minimo},{maximo},{media}\n")
         except:
-            pass  # salta columnas con texto
+            pass 
 
     archivo.close()
     print("Resumen guardado.")
